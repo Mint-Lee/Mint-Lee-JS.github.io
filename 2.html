@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+    ">
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+    <h2>JavaScript</h2>
+    <p>
+      Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+
+    </p>
+
+    <h1>Loop & Array</h1>
+    <script>
+      var coworkers = ['egoing','leezche','duru','taeho'];
+    </script>
+    <h2>Co workers</h2>
+    <ul>
+      <script>
+        var i = 0;
+        while(i < coworkers.length){
+          document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+          i = i + 1;
+        }
+      </script>
+  </body>
+</html>
