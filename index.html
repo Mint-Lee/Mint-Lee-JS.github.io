@@ -59,12 +59,12 @@
 
     </article>
     <ol>
-      <li><a onclick="fetch('ajax').then(function(response){
+      <li><a onclick="fetch('ajax').then(function(response){        
               response.text().then(function(text){
                 document.querySelector('article').innerHTML = text;
               })
             })">abc</li>
-
+    <!--fetch는 파일가져옴. then은 비동기 innerName은 Name내용을 수정함.-->
     <!--  funtion callbackme() {
           console.log('response end');
           }
@@ -79,5 +79,29 @@
           console.log('response end')
           })   -->
     </ol>
+      <li><a href="#!html" onclick="fetchPage('html'")HTML></li>
+      function fetchPage(name){        
+              fetch(name).then(funtion(response){
+                response.text().then(function(text){
+                document.querySelector('article').innerHTML = text;
+              })
+            });
+    </ol>
+    
+    fetch('list').then(function(response){
+    response.text().then(function(text){
+      var items = text.split(',');
+      var i = 0;
+      var tags = '';
+      while(i<items.length){
+        var item = items[i];
+        item = item.trim();
+        var tag = '<li><a href="#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>';
+        tags = tags + tag;
+        i = i + 1;
+      }
+      document.querySelector('#nav').innerHTML = tags;
+    })
+  });
   </body>
 </html>
