@@ -54,5 +54,30 @@
           i = i + 1;
         }
       </script>
+      
+      <article>
+
+    </article>
+    <ol>
+      <li><a onclick="fetch('ajax').then(function(response){
+              response.text().then(function(text){
+                document.querySelector('article').innerHTML = text;
+              })
+            })">abc</li>
+
+    <!--  funtion callbackme() {
+          console.log('response end');
+          }
+        =
+          callbackme = funtion(){
+          console.log('response end')
+          }
+        +
+          fetch('html').then(callbackme);
+        =
+          fetch('html').then(funtion(){
+          console.log('response end')
+          })   -->
+    </ol>
   </body>
 </html>
